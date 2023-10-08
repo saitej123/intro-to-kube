@@ -28,7 +28,7 @@ Start your minikube and let the games begin!
 
 ```
  minikube start
- 
+
  cd cyber-monday
 ```
 
@@ -51,10 +51,10 @@ git push -u origin cyber-<github-username>
 ## Main Project
 
 0. Let's start simple. Create a single nginx pod with
-   > a. containerPort 80 
-   
+   > a. containerPort 80
+
    > b. label `just-a-pod` from the nginx latest image
-   
+
    Complete, `nginx-pod.yml`. Run the command below to test or see [Testing](#testing).
 
    ```
