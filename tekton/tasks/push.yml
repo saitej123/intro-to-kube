@@ -27,7 +27,6 @@ spec:
       image: docker:20  # Use a Docker-in-Docker (DinD) image for Docker operations
       workingDir: /workspace/source
       script: |
-        # Mocking up pushing up an image
         echo "NOTE: FOR CHALLENGE EXERCISE ONLY"
         echo "==========================================="
         echo "This task does not push anything to the Docker's Container Registry"
@@ -39,14 +38,5 @@ spec:
         echo "Credentials"
         echo "==========================================="
         echo "${REGISTRY_PASSWORD}"
-        echo "${REGISTRY_USERNAME}" 
-        echo "${CONTAINER_REGISTRY}" 
-
-        # Set up Docker authentication to the container registry
-        # echo "${REGISTRY_PASSWORD}" | docker login -u "${REGISTRY_USERNAME}" --password-stdin "${CONTAINER_REGISTRY}"
-
-        # Build the Docker image and tag it with the desired name and version
-        # docker build -t "${IMAGE_NAME}" -f "${DOCKERFILE_PATH}" "${CONTEXT_PATH}"
-
-        # Push the Docker image to the container registry
-        # docker push "${IMAGE_NAME}"
+        echo "${REGISTRY_USERNAME}"
+        echo "${CONTAINER_REGISTRY}"
